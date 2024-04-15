@@ -25,20 +25,37 @@
         <div class="form">
             <h1>Lets do this!</h1>
             <form>
-                <label for="first-name">First name:</label>
-                <input type="text" id="first-name" name="first-name">
-                <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" name="last-name">
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <label for="phone-number">Phone Number:</label>
-                <input type="number" id="phone-number" name="phone-number">
-                <br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="number" id="confirm-password" name="confirm-password">
+                <div class="first-row">
+                    <div class="test">
+                        <label for="first-name">First name</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="test">
+                        <label for="last-name">Last name</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <div class="test">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="test">
+                        <label for="phone-number">Phone Number</label>
+                        <input type="number" id="phone-number" name="phone-number" required>
+                    </div>
+                </div>
+                <div class="third-row">
+                    <div class="test">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="test">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                </div>
+                <input type="submit" value="Create Account">
             </form>
         </div>
         <div class="bottom-text">
