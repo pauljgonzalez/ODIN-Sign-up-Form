@@ -1,5 +1,6 @@
-* {  border: 1px solid red;
+* { 
     box-sizing: border-box;
+    background-color: lightgray;
 
 }
 html,
@@ -21,7 +22,7 @@ body{
 }
 .main-left-container{
     height: 100%;
-    width: max(30%,400px);
+    min-width: max(40%,500px);
     display: flex;
     position: relative;
 }
@@ -42,4 +43,31 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 64px;
+}
+.main-right-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    
+}
+.top-text{
+    max-width: 55ch;
+    font-weight: bolder;
+    font-size: 28px;
+    margin-left: 64px;   
+}
+.form > *,
+.form{
+    background-color: white;
+    padding-left: 64px;
+}
+input[type],
+label{
+    background-color: white;
+}
+.bottom-text{
+    margin-left: 64px;
 }
