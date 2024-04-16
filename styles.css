@@ -62,8 +62,7 @@ body{
 .form > *,
 .form{
     background-color: white;
-    padding-left: 32px;
-
+    
 }
 .first-row,
 .second-row,
@@ -72,6 +71,7 @@ body{
     background-color: white;
     display: flex;
     flex-direction: row;
+    padding-left: 64px;
 }
 
 input{
@@ -79,10 +79,12 @@ input{
     flex-direction: column;
     background-color: white;
     border: 1px solid lightgray;
+    width: 250px;
+    
 }
 
-input:focus{
-    border: 1px solid black;
+h1{
+    padding-left: 64px;
 }
 .test{
     margin-bottom: 16px;
@@ -95,21 +97,69 @@ input:focus{
 label{
 margin-bottom: 0px;
 background-color: white;
+
+
 }
 .test{
     background-color: white;
 }
-input[type=submit]{
-   position: relative;
-   top: 60px;
-   padding-left: 64px;
-   padding-right: 64px;
-   padding-bottom: 16px;
-   padding-top: 16px;
-   border-radius: 12px;
-   background-color: rgba(128, 0, 128, .75);
-   color: white;
-   font-size: 16px;
-   font-weight: bolder;
-   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"]  {
+    &:valid{
+        border: 2px solid green;
+        border-radius: 4px;
+        
+    }
 }
+input:focus{
+    border: 1px solid black;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    &:invalid:not(:focus):not(:placeholder-shown){
+        border: 2px solid red;
+        border-radius: 4px;
+    }
+}
+input[type=submit]{
+    position: relative;
+    top: 32px;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    margin-left: 64px;
+    border-radius: 12px;
+    background-color: rgba(128, 0, 128, .75);
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ }
+ .password-hint
+ {
+    background-color: white;
+    font-size: 14px;
+ }
+ ul{
+    background-color: white;
+    display: list-item;
+    list-style-position: inside;
+    padding-left: 0;
+    padding-left: 32px;
+    font-size: 14px;
+ }
+ .test2{
+    background-color: lightgray;
+    width: 100%;
+ }
+
+ 
+ input[type=submit] > input[data-error]::after{
+    content: attr(data-error);
+ }
